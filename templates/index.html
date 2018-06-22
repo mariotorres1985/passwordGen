@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto:400,700" rel="stylesheet">
+
+  </head>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    p {
+      font-size: 14px;font-weight:bold;
+    }
+
+    .navbar-inverse {
+      background-color: gray;
+      border-color: gray;
+    }
+
+  </style>
+
+
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>-->
+          <!--<a class="navbar-brand" href="#"><img src="https://www.dealerspike.com/images/dealerspike-landing-footer-logo.png" alt="ds logo" style="width:125px;height:auto;"></a>-->
+        </div>
+      </div>
+    </nav>
+    <br>
+
+    <div class="container">
+      <div class="row">
+
+
+        <div class="col-sm-4">
+        </div>
+
+        <div class="col-sm-4 text-center">
+          <h1>
+            Password Generator
+          </h1>
+
+        </div>
+
+        <div class="col-sm-4">
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+      </div>
+      <div class="col-sm-4 text-center ">
+      </div>
+
+
+      <div class="col-sm-4 ">
+        <p id="demo" class="text-center"></p>
+      </div>
+      <div class="col-sm-4">
+      </div>
+      <div>
+        <div class="col-sm-4">
+        </div>
+
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-4">
+        </div>
+
+
+        <div class="col-sm-4 text-center">
+          <button onclick="document.getElementById('demo').innerHTML = (password_generator())">Click Me</button>
+        </div>
+        <div class="col-sm-4 "></div>
+        <div>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <script>
+    function password_generator(len) {
+      var pwlist = '';
+      for (i = 0; i < 5; i++) {
+        var length = (len) ? (len) : (10);
+        var string = "abcdefghjklmnpqrstuvwxyz"; //to upper
+        var numeric = '0123456789';
+        var punctuation = '!@#$*+?=';
+        var password = "";
+        var character = "";
+        var crunch = true;
+        while (password.length < length) {
+          entity1 = Math.ceil(string.length * Math.random() * Math.random());
+          entity2 = Math.ceil(numeric.length * Math.random() * Math.random());
+          entity3 = Math.ceil(punctuation.length * Math.random() * Math.random());
+          hold = string.charAt(entity1);
+          hold = (entity1 % 2 == 0) ? (hold.toUpperCase()) : (hold);
+          character += hold;
+          character += numeric.charAt(entity2);
+          character += punctuation.charAt(entity3);
+          password = character;
+
+
+        }
+        pwlist += password + '<br>'
+
+      }
+      return pwlist;
+    }
+
+    document.getElementById('demo').innerHTML = (password_generator());
+
+  </script>
+
+
+
+</html>

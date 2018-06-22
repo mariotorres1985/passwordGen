@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <title>Ocean Demo</title>
+
+
+    <style>
+
+    body,h1,p {font-family: "Raleway", sans-serif;}
+    h1{color:white;}
+    body, html {height: 100%}
+    body{
+    background-image: url('/static/images/hai-3347787_1920.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;}
+    p{color:white;font-size: xx-large;font-weight: bold;}
+    .blur {color: transparent; text-shadow: 0 0 2px #f5f5f5;;}
+    .comingSoon{padding-top: 227px;}
+    .comingSoon h1:hover{text-shadow:0 0 0 #f5f5f5;}
+    .testSpace{text-align: center;}
+    .footer{background-color:darkgray; }
+    .footer-bottom-left{position: absolute; left: 0; bottom: 0;padding: 12px 24px!important; width:44%; }
+    .logo{padding-top:15px}
+    .logo a{color:white;}
+    .logo a:hover{text-decoration: none; }
+    .animated {-webkit-animation-duration: 5s;animation-duration: 5s;-webkit-animation-fill-mode: both;animation-fill-mode: both;}
+    .animatedCount {-webkit-animation-duration: 10s;animation-duration: 10s;-webkit-animation-fill-mode: both;animation-fill-mode: both;}
+    .navbar-brand{height: 79px;}
+    .navbar-inverse{background-color: #001f3154; border-color:#001f3100; box-shadow: 0px 6px 38px #2b5667; }
+    </style>
+
+    </head>
+
+    <body>
+      <nav class="navbar navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+                 <img class="logo navbar-brand" src="/static/images/ocean_logo.png" width="auto">
+              <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>-->
+            </div>
+          </div>
+        </nav>
+
+        <div class="container">
+             <div class="row">
+                <div class="col-6 col-md-4" >
+                <p class="Quotes"> </p>
+
+                <!--<a href=""/><img class="logo" src="/static/images/ocean_logo.png" width="125"></a>-->
+                  </div>
+                <div class="col-6 col-md-4" >
+
+                </div>
+                <div class="col-6 col-md-4" >
+                </div>
+            </div>
+
+            <div class="row comingSoon testSpace">
+                <div class="col-6 col-md-4" >
+                    </div>
+                <div class="col-6 col-md-4 col-sm-4" >
+                <h1 class="blur animated fadeIn">COMING SOON</h1>
+                </div>
+                <div class="col-6 col-md-4" >
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 col-md-4" >
+                    </div>
+               <div class="col-6 col-md-4 col-sm-4" >
+                   <hr>
+                  </div>
+                  <div class="col-6 col-md-4" >
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-4" >
+                    </div>
+               <div class="col-6 col-md-4 col-sm-4 testSpace" >
+                <p id="daysLeft" class="animatedCount fadeIn" > </p>
+                  </div>
+                  <div class="col-6 col-md-4" >
+                    </div>
+            </div>
+    </div>
+<footer class="bd-footer text-muted footer-bottom-left">
+    <div class="container-fluid p-3 p-md-5">
+        <div class="row">
+             <div class="col-6 col-md-4 col-sm-4" >
+                  <span style="color:white;">Powered by <a href="http://flask.pocoo.org/community/poweredby" target="_blank">Flask</a></span>
+             </div>
+             <div class="col-6 col-md-4" >
+               </div>
+
+              <div class="col-6 col-md-4" >
+                </div>
+
+         </div>
+
+           <!-- <div class="row">
+                <form action="." method="POST">
+                    <textarea class="form-control" name="contents" placeholder="Enter a comment"></textarea>
+                    <input type="submit" class="btn btn-success" value="Post comment">
+                </form>
+            </div>-->
+
+        </div>
+</footer>
+    </body>
+
+
+    <script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("daysLeft").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("daysLeft").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</html>
